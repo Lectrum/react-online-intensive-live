@@ -1,11 +1,9 @@
 // Core
-import React, { Component } from 'react';
+import React from 'react';
 
 // Instruments
 import Styles from './styles.m.css';
 
-export default class StatusBar extends Component {
-    render () {
-        return <section className = { Styles.statusBar } />;
-    }
-}
+export const StatusBar = () => {
+    return <section className = { Styles.statusBar } />;
+};
