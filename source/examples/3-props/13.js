@@ -7,8 +7,8 @@ const Parent = (props) => {
         profile: { firstName, lastName },
     } = props;
 
-    // this.props.test = 'error!';
-    // this.props.profile.deepTest = 'no error :(';
+    // props.test = 'error!';
+    // props.profile.firstName = 'no error :(';
 
     console.log('props:', props);
 

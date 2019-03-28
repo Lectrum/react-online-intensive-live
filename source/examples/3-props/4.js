@@ -23,8 +23,8 @@ class Parent extends Component {
     render() {
         return (
             <Child
-                { ...this.profile1 }
                 { ...this.profile2 }
+                { ...this.profile1 }
             />
         );
     }

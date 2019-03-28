@@ -21,6 +21,7 @@ const Parent = (props) => {
         </>
     );
 };
+
 Parent.propTypes = {
     age:            number.isRequired,
     firstName:      string.isRequired,
