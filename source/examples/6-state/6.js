@@ -36,4 +36,4 @@ class Wizard extends Component {
     }
 }
 
-render(<Wizard />, document.getElementById('root'));
+render(<Wizard />, document.getElementById('app'));
