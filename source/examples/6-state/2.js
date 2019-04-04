@@ -12,7 +12,7 @@ class Wizard extends Component {
         super(props);
 
         this.state = {
-            name: props.name,
+            name: props.name, // derived state, производное состояние
             age:  this.props.age,
         };
     }
@@ -39,4 +39,4 @@ class Tower extends Component {
     }
 }
 
-render(<Tower />, document.getElementById('root'));
+render(<Tower />, document.getElementById('app'));
