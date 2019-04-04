@@ -1,5 +1,5 @@
 // Core
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 
 // Instruments
 import Styles from './styles.m.css';
@@ -9,15 +9,10 @@ import { Context } from '../Context';
 
 export const Composer = () => {
     const context = useContext(Context);
-    const [ value, setValue ] = useState(0);
 
     return (
         <section className = { Styles.composer }>
-            <img
-                src = { context.avatar }
-                onClick = { () => setValue(value + 1) }
-            />
-            {value}
+            <img src = { context.avatar } />
             <form>
                 <textarea
                     placeholder = { `What's on your mind, ${
