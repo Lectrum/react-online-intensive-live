@@ -13,13 +13,13 @@ class Wizard extends Component {
     _increaseAge = () => this.setState((prevState) => ({ age: prevState.age + 1 }));
 
     _getPowers = () => {
-        setImmediate(() => {
-            this._increaseAge();
-            this._increaseAge();
-            this._increaseAge();
-            this._increaseAge();
-            this._increaseAge();
-        });
+        // setImmediate(() => {
+        this._increaseAge();
+        this._increaseAge();
+        this._increaseAge();
+        this._increaseAge();
+        this._increaseAge();
+        // });
     };
 
     render() {

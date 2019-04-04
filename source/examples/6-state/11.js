@@ -50,4 +50,4 @@ class Wizard extends Component {
     }
 }
 
-render(<Wizard prefix = 'λ' />, document.getElementById('root'));
+render(<Wizard prefix = 'λ' />, document.getElementById('app'));
