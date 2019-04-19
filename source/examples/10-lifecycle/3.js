@@ -32,6 +32,12 @@ class Farm extends Component {
         return this.props !== nextProps || this.state !== nextState;
     }
 
+    getSnapshotBeforeUpdate() {
+        log('PARENT → getSnapshotBeforeUpdate', 'coral');
+
+        return null;
+    }
+
     _yieldApples = () => this.setState(({ apples }) => ({ apples: apples + 1 }));
 
     render() {
