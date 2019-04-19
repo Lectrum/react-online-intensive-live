@@ -5,6 +5,12 @@ import { log } from 'helpers';
 
 // Компонент-ферма, можно собирать урожай
 class Farm extends Component {
+    constructor() {
+        super();
+
+        log('PARENT → constructor', 'wheat');
+    }
+
     state = {
         apples: 5,
         farmer: 'Уолтер Уайт',
