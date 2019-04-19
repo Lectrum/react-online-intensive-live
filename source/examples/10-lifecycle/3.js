@@ -3,6 +3,77 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { log } from 'helpers';
 
+class Storage extends Component {
+    constructor() {
+        super();
+
+        log('CHILD  → constructor', 'wheat');
+    }
+
+    state = {
+        apples:  0,
+        carrots: 5,
+    };
+
+    static getDerivedStateFromProps(nextProps, prevState) {
+        log('CHILD  → static getDerivedStateFromProps', 'orange');
+
+        if (nextProps.apples > prevState.apples) {
+            return {
+                apples: nextProps.apples,
+            };
+        }
+
+        return null;
+    }
+
+    componentDidMount() {
+        log('CHILD  → componentDidMount', 'lime');
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        log('CHILD  → shouldComponentUpdate', 'olive');
+
+        return this.props !== nextProps || this.state !== nextState;
+    }
+
+    getSnapshotBeforeUpdate() {
+        log('CHILD  → getSnapshotBeforeUpdate', 'coral');
+
+        return null;
+    }
+
+    componentDidUpdate() {
+        log('CHILD  → componentDidUpdate', 'yellow');
+    }
+
+    componentWillUnmount() {
+        log('CHILD  → componentWillUnmount', 'skyblue');
+    }
+
+    _yieldCarrot = () => this.setState(({ carrots }) => ({ carrots: carrots + 1 }));
+
+    render() {
+        const { apples, carrots } = this.state;
+
+        log('CHILD  → render', 'red');
+
+        const carrotsJSX = Array(carrots).fill('🥕');
+        const applesJSX = Array(apples).fill('🍎');
+
+        return (
+            <>
+                <h1>📦 Коробка с овощами и фруктами.</h1>
+                <h3>У тебя {apples} яблок.</h3>
+                <h3>У тебя {carrots} моркови.</h3>
+                <p>Моркови: {carrotsJSX}</p>
+                <p>Яблок: {applesJSX}</p>
+                <button onClick = { this._yieldCarrot }>Собрать морковь 🥕</button>
+            </>
+        );
+    }
+}
+
 // Компонент-ферма, можно собирать урожай
 class Farm extends Component {
     constructor() {
@@ -12,8 +83,9 @@ class Farm extends Component {
     }
 
     state = {
-        apples: 5,
-        farmer: 'Уолтер Уайт',
+        apples:        5,
+        farmer:        'Уолтер Уайт',
+        isStorageOpen: true,
     };
 
     static getDerivedStateFromProps() {
@@ -44,8 +116,12 @@ class Farm extends Component {
 
     _yieldApples = () => this.setState(({ apples }) => ({ apples: apples + 1 }));
 
+    _useStorage = () => this.setState(({ isStorageOpen }) => ({
+        isStorageOpen: !isStorageOpen,
+    }));
+
     render() {
-        const { farmer, apples } = this.state;
+        const { farmer, apples, isStorageOpen } = this.state;
         const applesJSX = Array(apples).fill('🍎');
 
         log('PARENT → render', 'red');
@@ -54,7 +130,11 @@ class Farm extends Component {
             <section className = 'example'>
                 <h1>👩🏼‍🌾 Привет, фермер {farmer}.</h1>
                 <p>Яблок: {applesJSX}</p>
+                <button onClick = { this._useStorage }>
+                    Открыть/закрыть хранилище 📦
+                </button>
                 <button onClick = { this._yieldApples }>Собрать яблоки 🍎</button>
+                {isStorageOpen && <Storage apples = { apples } />}
             </section>
         );
     }
