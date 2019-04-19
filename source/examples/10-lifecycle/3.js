@@ -10,6 +10,10 @@ class Farm extends Component {
         farmer: 'Уолтер Уайт',
     };
 
+    componentDidMount() {
+        log('CHILD  → componentDidMount', 'lime');
+    }
+
     _yieldApples = () => this.setState(({ apples }) => ({ apples: apples + 1 }));
 
     render() {
@@ -28,4 +32,4 @@ class Farm extends Component {
     }
 }
 
-render(<Farm />, document.getElementById('root'));
+render(<Farm />, document.getElementById('app'));

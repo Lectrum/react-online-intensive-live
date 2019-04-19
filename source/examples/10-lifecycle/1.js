@@ -28,4 +28,4 @@ class Parent extends Component {
     }
 }
 
-render(<Parent />, document.getElementById('root'));
+render(<Parent />, document.getElementById('app'));

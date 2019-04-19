@@ -45,5 +45,5 @@ render(
     <ErrorBoundary>
         <Parent />
     </ErrorBoundary>,
-    document.getElementById('root'),
+    document.getElementById('app'),
 );
