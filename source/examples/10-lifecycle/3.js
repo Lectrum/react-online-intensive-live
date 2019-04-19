@@ -38,6 +38,10 @@ class Farm extends Component {
         return null;
     }
 
+    componentDidUpdate() {
+        log('PARENT → componentDidUpdate', 'yellow');
+    }
+
     _yieldApples = () => this.setState(({ apples }) => ({ apples: apples + 1 }));
 
     render() {
