@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 // Instruments
 import Styles from './styles.m.css';
 
-// Component
+// Components
 import { Context } from '../Context';
 
 export const Composer = (props) => {

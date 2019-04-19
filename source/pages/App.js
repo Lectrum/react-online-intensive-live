@@ -10,8 +10,8 @@ import avatar from '../theme/assets/lisa';
 
 const options = {
     avatar,
-    currentUserFirstName: 'Lisa',
-    currentUserLastName:  'Simpson',
+    currentUserFirstName: 'Дмитрий',
+    currentUserLastName:  'Вакациенко',
 };
 
 export const App = hot(module)(() => {
