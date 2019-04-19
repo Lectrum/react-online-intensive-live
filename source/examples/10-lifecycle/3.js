@@ -11,11 +11,11 @@ class Farm extends Component {
     };
 
     componentDidMount() {
-        log('CHILD  → componentDidMount', 'lime');
+        log('PARENT → componentDidMount', 'lime');
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        log('CHILD  → shouldComponentUpdate', 'olive');
+        log('PARENT → shouldComponentUpdate', 'olive');
 
         return this.props !== nextProps || this.state !== nextState;
     }
