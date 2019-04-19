@@ -14,6 +14,12 @@ class Farm extends Component {
         log('CHILD  → componentDidMount', 'lime');
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        log('CHILD  → shouldComponentUpdate', 'olive');
+
+        return this.props !== nextProps || this.state !== nextState;
+    }
+
     _yieldApples = () => this.setState(({ apples }) => ({ apples: apples + 1 }));
 
     render() {
