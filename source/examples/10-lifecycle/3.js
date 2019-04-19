@@ -16,6 +16,12 @@ class Farm extends Component {
         farmer: 'Уолтер Уайт',
     };
 
+    static getDerivedStateFromProps() {
+        log('PARENT → static getDerivedStateFromProps', 'orange');
+
+        return null;
+    }
+
     componentDidMount() {
         log('PARENT → componentDidMount', 'lime');
     }
