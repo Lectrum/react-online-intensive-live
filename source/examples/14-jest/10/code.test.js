@@ -1,6 +1,9 @@
 // Core
 import { v4 } from 'uuid';
 
+// jester — шут
+// mock — насмешка
+// spy — шпион
 global.Date = jest.fn();
 
 class User {

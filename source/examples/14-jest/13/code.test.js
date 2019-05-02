@@ -3,6 +3,7 @@ const callFuncsExceptFirst = (...funcs) => funcs.forEach((func, index) => index 
 describe('«callFuncsExceptFirst» function:', () => {
     const func1 = jest.fn();
     const func2 = jest.fn();
+
     callFuncsExceptFirst(func1, func2);
 
     test('should not call first-argument function', () => {

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`«User» constructor should match its snapshot inline 1`] = `
+User {
+  "created": mockConstructor {},
+  "id": "82c71578-0d34-4784-9f4d-eb219067b8d5",
+  "name": "Jack",
+}
+`;
