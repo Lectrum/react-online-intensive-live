@@ -10,4 +10,4 @@
 
 // ReactDOM.render(<App />, document.getElementById('app'));
 
-import './examples/9-refs/3';
+import './examples/16-routing';

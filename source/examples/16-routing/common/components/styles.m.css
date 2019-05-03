@@ -1,0 +1,43 @@
+.navigation {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 10px;
+
+    & button,
+    & a {
+        display: flex;
+        align-items: center;
+        border-radius: 7px;
+        outline: 0;
+        height: 45px;
+        padding: 0 15px;
+        cursor: pointer;
+        color: cornflowerblue;
+        border: 1px solid currentColor;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-weight: 700;
+        font-size: 24px;
+
+        &:not(:last-child) {
+            margin-right: 7px;
+        }
+
+        &:hover {
+            background-color: cornflowerblue;
+            color: wheat;
+        }
+
+        &:any-link {
+            text-decoration: none;
+        }
+    }
+
+    & .active {
+        color: rebeccapurple;
+
+        &:hover {
+            color: palegreen;
+        }
+    }
+}
