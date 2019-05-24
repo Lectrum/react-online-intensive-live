@@ -8,7 +8,7 @@ import {
 import GSAP from 'gsap';
 
 // Components
-import * as Components from '../../components';
+import * as Components from '../';
 
 // Instruments
 import Styles from './styles.module.css';

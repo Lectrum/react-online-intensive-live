@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import Styles from './styles.module.css';
 
 // Components
-import { Context } from '../Context';
+import { Context } from '../';
 
 export const Composer = (props) => {
     const context = useContext(Context);

@@ -1,8 +1,8 @@
 // Core
 import React, { Component } from 'react';
+import { object } from 'prop-types';
 
 // Instruments
-import { object } from 'prop-types';
 import Styles from './styles.module.css';
 
 export class Catcher extends Component {
@@ -14,7 +14,7 @@ export class Catcher extends Component {
         error: false,
     };
 
-    componentDidCatch (error, stack) {
+    componentDidCatch(error, stack) {
         console.log('ERROR:', error);
         console.log('STACKTRACE:', stack.componentStack);
 
@@ -23,7 +23,7 @@ export class Catcher extends Component {
         });
     }
 
-    render () {
+    render() {
         if (this.state.error) {
             return (
                 <section className = { Styles.catcher }>

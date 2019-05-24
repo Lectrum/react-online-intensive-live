@@ -7,7 +7,7 @@ import GSAP from 'gsap';
 import Styles from './styles.module.css';
 
 // Components
-import { Context } from '../Context';
+import { Context } from '../';
 
 export const Postman = () => {
     const context = useContext(Context);

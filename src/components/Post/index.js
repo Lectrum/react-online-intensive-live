@@ -7,8 +7,7 @@ import { func, string, number, array } from 'prop-types';
 import Styles from './styles.module.css';
 
 // Component
-import { Context } from '../Context';
-import { Like } from '../Like';
+import { Context, Like } from '../';
 
 export const Post = (props) => {
     const context = useContext(Context);
@@ -20,9 +19,10 @@ export const Post = (props) => {
                 onClick = { () => props._removePost(props.id) }
             />
             <img src = { context.avatar } />
-            <a>{`${context.currentUserFirstName} ${
-                context.currentUserLastName
-            }`}
+            <a>
+                {`${context.currentUserFirstName} ${
+                    context.currentUserLastName
+                }`}
             </a>
             <time>{moment.unix(props.created).format('MMMM D h:mm:ss a')}</time>
             <p>{props.comment}</p>

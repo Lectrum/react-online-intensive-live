@@ -5,7 +5,7 @@ import React, { useContext } from 'react';
 import Styles from './styles.module.css';
 
 // Component
-import { Context } from '../Context';
+import { Context } from '../';
 
 export const StatusBar = () => {
     const context = useContext(Context);
