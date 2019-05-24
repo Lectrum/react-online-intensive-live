@@ -1,0 +1,48 @@
+.room {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(120deg, #0b486b, #f56217);
+    padding-top: 15px;
+
+    & div {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-image: linear-gradient(120deg, #f6d365, #fda085);
+        margin-bottom: 10px;
+    }
+
+    & button {
+        background-color: transparent;
+        color: wheat;
+        border-radius: 7px;
+        font-size: 24px;
+        cursor: pointer;
+        border: 3px solid currentColor;
+        transition: box-shadow 0.3s ease-in-out;
+        margin-bottom: 30px;
+        outline: none;
+
+        &:hover {
+            box-shadow: 1px 2px 1px currentcolor;
+        }
+    }
+
+    & ul {
+        top: 150px;
+        color: var(--paletteColor4);
+        width: 600px;
+        min-height: 70vh;
+        padding: 10px 0 0 40px;
+        border: 1px solid var(--paletteColor4);
+        border-radius: 7px;
+
+        & li {
+            user-select: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+    }
+}

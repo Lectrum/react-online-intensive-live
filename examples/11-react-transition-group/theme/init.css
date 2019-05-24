@@ -1,0 +1,55 @@
+:root {
+    & body {
+        & .example {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+
+            & b {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                height: 100px;
+                margin-top: 25px;
+                margin-bottom: 25px;
+                background-image: linear-gradient(120deg, #f6d365, #fda085);
+                font-size: 64px;
+                font-weight: 800;
+                border: 2px solid currentColor;
+                border-radius: 50%;
+
+                &:last-child {
+                    background-image: linear-gradient(
+                        120deg,
+                        var(--paletteColor4),
+                        var(--paletteColor5)
+                    );
+                }
+            }
+        }
+    }
+}
+
+.enter {
+    opacity: 0.01;
+    transform: translateY(300px) scale(2);
+}
+
+.enterActive {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: opacity 4500ms ease-in, transform 4500ms ease-in;
+}
+
+.exit {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.exitActive {
+    opacity: 0.01;
+    transform: translateY(300px) scale(2);
+    transition: opacity 4500ms ease-out, transform 4500ms ease-out;
+}
