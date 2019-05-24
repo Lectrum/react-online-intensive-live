@@ -85,7 +85,6 @@ npm start
 
 10. Перейди в браузер и открой страницу по адресу [http://localhost:3000](http://localhost:3000/). После загрузки сборки появится страница со стартовой точкой и сообщением «Добро пожаловать!»;
 11. Открой **`Chrome Dev Tools`** и перейди на вкладку **`console`**, там не должно быть каких-либо ошибок.
-12. ❗️ В рамках обучения мы будем применять [особую технику синхронизации](https://lab.lectrum.io/faq#what-is-synchronization) прогресса с преподавателем. Обязательно проверь [работоспособность синхронизации](https://lab.lectrum.io/faq#how-synchornization-works) на твоём компьютере, [следуя этой инструкции](https://lab.lectrum.io/faq#how-to-check-if-synchornization-works).
 
 <br>
 
