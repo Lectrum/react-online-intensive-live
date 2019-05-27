@@ -11,6 +11,7 @@ const element1 = createElement(
             color:      'wheat',
             userSelect: 'none',
             cursor:     'pointer',
+            textAlign:  'center',
         },
         onClick: () => {
             temp += 1;
@@ -29,12 +30,11 @@ const element2 = createElement(
             alignItems:      'center',
             width:           'auto',
             height:          150,
+            backgroundColor: 'black',
+            borderRadius:    5,
             padding:         7,
-            border:          '5px solid gold',
-            borderRadius:    30,
-            backgroundColor: 'rebeccapurple',
         },
-        title: 'A square!',
+        title: 'Welcome!',
     },
     element1,
 );

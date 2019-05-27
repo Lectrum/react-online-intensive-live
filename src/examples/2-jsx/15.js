@@ -10,12 +10,12 @@ const UiKit = {
     },
     Content: class extends Component {
         render() {
-            return <h1>A Content.</h1>;
+            return <h2>A Content.</h2>;
         }
     },
     Footer: class extends Component {
         render() {
-            return <h1>A Footer.</h1>;
+            return <h3>A Footer.</h3>;
         }
     },
 };

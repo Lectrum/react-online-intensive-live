@@ -7,10 +7,10 @@ const UiKit = {
         return <h1>A Header.</h1>;
     },
     Content() {
-        return <h1>A Content.</h1>;
+        return <h2>A Content.</h2>;
     },
     Footer() {
-        return <h1>A Footer.</h1>;
+        return <h3>A Footer.</h3>;
     },
 };
 

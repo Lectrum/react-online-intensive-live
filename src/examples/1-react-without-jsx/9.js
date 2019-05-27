@@ -6,11 +6,10 @@ const element1 = createElement(
     'h1',
     {
         style: {
-            color:      'white',
+            color:      'wheat',
             userSelect: 'none',
             cursor:     'pointer',
             textAlign:  'center',
-            margin:     0,
         },
     },
     'Hi, I am a React element. I was produced by «createElement» function.',
@@ -21,7 +20,6 @@ const element2 = createElement(
     {
         title: 'A title!',
         style: {
-            gridRow:        '2',
             display:        'flex',
             justifyContent: 'center',
             alignItems:     'center',
@@ -33,7 +31,6 @@ const element2 = createElement(
 const element3 = cloneElement(element2, {
     style: {
         backgroundColor: 'black',
-        border:          '1px solid white',
         borderRadius:    5,
         padding:         7,
     },

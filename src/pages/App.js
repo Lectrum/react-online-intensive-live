@@ -1,8 +1,9 @@
 // Core
 import React from 'react';
 
-import '../examples/theme/init.css';
+// Components
+import { Feed } from '../components/Feed';
 
 export const App = () => {
-    return <h1>Добро пожаловать!</h1>;
+    return <Feed />;
 };

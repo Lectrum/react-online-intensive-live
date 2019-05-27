@@ -10,27 +10,28 @@ const element = (
             faucibus ex ac nunc efficitur vulputate. In hac habitasse platea
             dictumst.
         </p>
-        <input
-            defaultChecked
-            id = 'subscribe'
-            name = 'subscription'
-            type = 'radio'
-        />
-        <label htmlFor = 'subscribe'>Subscribe to newsletter</label>
-        <br />
-        <br />
-        <input
-            defaultChecked = { false }
-            id = 'unsubscribe'
-            name = 'subscription'
-            type = 'radio'
-        />
-        <label
-            htmlFor = 'unsubscribe'
-            value = 'hello'>
-            Unsubscribe from newsletter
-        </label>
-        <br />
+        <div>
+            <input
+                defaultChecked
+                id = 'subscribe'
+                name = 'subscription'
+                type = 'radio'
+            />
+            <label htmlFor = 'subscribe'>Subscribe to newsletter</label>
+        </div>
+        <div>
+            <input
+                defaultChecked = { false }
+                id = 'unsubscribe'
+                name = 'subscription'
+                type = 'radio'
+            />
+            <label
+                htmlFor = 'unsubscribe'
+                value = 'hello'>
+                Unsubscribe from newsletter
+            </label>
+        </div>
         <br />
         <input
             type = 'submit'

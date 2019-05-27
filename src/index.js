@@ -9,3 +9,5 @@ import './theme/init.css';
 import { App } from './pages/App';
 
 ReactDOM.render(<App />, document.getElementById('root'));
+
+// import './examples';

@@ -5,7 +5,7 @@ import { render } from 'react-dom';
 const element1 = <h1 key = { 0 }>Hi, I am a React element.</h1>;
 
 /**
- * Это два элементы — эквивалентны, разница только в синтаксисе.
+ * Эти два элементы — эквивалентны, разница только в синтаксисе.
  */
 
 const element2 = React.createElement(

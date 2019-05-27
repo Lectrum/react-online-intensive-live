@@ -2,10 +2,9 @@
 import { createElement } from 'react';
 import { render } from 'react-dom';
 
-render(
-    createElement('h1', null, 'Hi, I am a React element.'),
-    document.getElementById('root'),
-    () => {
-        console.log('→ app rendered!');
-    },
-);
+const element = createElement('h1', null, 'Hi, I am a React element.');
+const callback = () => {
+    console.log('→ app rendered!');
+};
+
+render(element, document.getElementById('root'), callback);
