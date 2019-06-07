@@ -26,7 +26,7 @@ class Parent extends Component {
             <>
                 <Child
                     visible
-                    { ...this.profile }
+                    {  ...this.profile }
                 />
                 <Child
                     visible = { false }

@@ -5,6 +5,8 @@ import { render } from 'react-dom';
 const Child = (props) => {
     const childrenJSX = [];
 
+    console.log('→ props', props);
+
     Children.forEach(props.children, (child, index) => {
         childrenJSX.push(<li key = { index }>{child}</li>);
     });

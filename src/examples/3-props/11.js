@@ -20,7 +20,7 @@ const Parent = (props) => {
 
 Parent.defaultProps = {
     visible:   true,
-    firstName: '❗️ NO_FIRST_NAME',
+    firstName: 1234,
     lastName:  '️❗️ NO_LAST_NAME',
 };
 

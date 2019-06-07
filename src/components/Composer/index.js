@@ -1,16 +1,22 @@
 // Core
-import React from 'react';
+import React, { useContext } from 'react';
+
+// Components
+import { Context } from '../';
 
 // Instruments
-import avatar from '../../theme/assets/lisa.png';
 import Styles from './styles.module.css';
 
 export const Composer = () => {
+    const context = useContext(Context);
+
     return (
         <section className = { Styles.composer }>
-            <img src = { avatar } />
+            <img src = { context.avatar } />
             <form>
-                <textarea placeholder = { 'What\'s on your mind, Lisa?' } />
+                <textarea
+                    placeholder = { `What's on your mind, ${context.currentUserFirstName}?` }
+                />
                 <input
                     type = 'submit'
                     value = 'Post'

@@ -19,7 +19,7 @@ class Parent extends Component {
     render() {
         const data = {
             [ `${this.PREFIX_1}_YEAR` ]: this.CURRENT_YEAR,
-            [ `${this.PREFIX_2}_YEAR` ]: this.CURRENT_YEAR,
+            [ `${this.PREFIX_2}_YEAR` ]: this.CURRENT_YEAR + 1,
         };
 
         return <Child { ...data } />;

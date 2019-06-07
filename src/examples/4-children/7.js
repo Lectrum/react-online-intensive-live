@@ -3,6 +3,8 @@ import React, { Children } from 'react';
 import { render } from 'react-dom';
 
 const Child = (props) => {
+    console.log('→ props', props);
+
     const childrenJSX = Children.map(props.children, (child) => {
         return <li>{child}</li>;
     });

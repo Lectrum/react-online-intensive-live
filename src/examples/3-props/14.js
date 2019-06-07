@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 
 class Parent extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
 
-        console.log('→ constructor props', props);
+        // console.log('→ constructor props', props);
         console.log('→ constructor this.props', this.props);
     }
 

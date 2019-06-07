@@ -3,7 +3,7 @@ import React, { Children } from 'react';
 import { render } from 'react-dom';
 
 const Child = (props) => {
-    console.log('→ props.children', props.children);
+    console.log('→ props', props);
 
     const childrenJSX = Children.toArray(props.children);
 

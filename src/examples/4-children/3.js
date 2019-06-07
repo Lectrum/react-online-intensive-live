@@ -6,11 +6,11 @@ const Child = (props) => {
     console.log('→ props', props);
     console.log('→ typeof props.children', typeof props.children);
 
-    return props.children;
+    return <h1>{props.children.toUpperCase()}</h1>;
 };
 
 const Parent = () => {
-    return <Child>{null}</Child>;
+    return <Child>{true ? 'Avada kedavra!' : null}</Child>;
 };
 
 render(<Parent />, document.getElementById('root'));

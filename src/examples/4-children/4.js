@@ -8,7 +8,7 @@ const Child = (props) => {
      * от англ. opaque data structure
      */
 
-    console.log('→ props.children', props.children);
+    console.log('→ props', props);
     console.log('→ Array.isArray(children)', Array.isArray(props.children));
 
     return props.children;

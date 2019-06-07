@@ -6,7 +6,7 @@ const Child = (props) => {
     console.log('→ props', props);
     console.log('→ typeof props.children', typeof props.children);
 
-    return props.children;
+    return <h1>{props.children}</h1>;
 };
 
 const Parent = () => {
