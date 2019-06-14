@@ -8,19 +8,19 @@ class Wizard extends Component {
         age:  6000,
     };
 
-    renders = 0;
-
     _increaseAge = () => this.setState((prevState) => ({ age: prevState.age + 1 }));
 
     _getPowers = () => {
         // setImmediate(() => {
-            this._increaseAge();
-            this._increaseAge();
-            this._increaseAge();
-            this._increaseAge();
-            this._increaseAge();
+        this._increaseAge();
+        this._increaseAge();
+        this._increaseAge();
+        this._increaseAge();
+        this._increaseAge();
         // });
     };
+
+    renders = 0;
 
     render() {
         const { name, age } = this.state;

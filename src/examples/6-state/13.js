@@ -2,19 +2,23 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-export default class Wizard extends Component {
+class Wizard extends Component {
     state = {
         name: 'Gendalf',
         age:  6000,
+    };
+
+    _doJob = () => {
+        this.setState({
+            age: 6001,
+        });
     };
 
     render() {
         const { name, age } = this.state;
 
         // :(
-        this.setState({
-            age: 6001,
-        });
+        this._doJob();
 
         return (
             <h1>

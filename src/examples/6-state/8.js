@@ -11,6 +11,7 @@ class Wizard extends Component {
     _updateNewSpellName = (event) => {
         console.log('→ event.target', event.target);
         console.log('→ event.target.value', event.target.value);
+
         if (event.target.value) {
             this.setState({ newSpell: event.target.value });
         }
