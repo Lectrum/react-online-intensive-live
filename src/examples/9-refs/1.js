@@ -21,6 +21,7 @@ const Parent = () => {
             <input
                 disabled = { !isEditing }
                 ref = { (inputElement) => {
+                    // Логика
                     nameInputRef.current = inputElement;
                 } }
                 value = { name }
