@@ -2,4 +2,4 @@
 import './theme/init.css';
 
 // Examples
-import './6-state';
+import './10-lifecycle';

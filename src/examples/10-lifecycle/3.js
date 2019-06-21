@@ -85,7 +85,6 @@ class Farm extends Component {
 
     state = {
         apples:        5,
-        farmer:        'Уолтер Уайт',
         isStorageOpen: true,
     };
 
@@ -116,21 +115,22 @@ class Farm extends Component {
     }
 
     _yieldApples = () => this.setState(({ apples }) => ({ apples: apples + 1 }));
-    _useStorage = () => this.setState(({ isStorageOpen }) => ({
+
+    _toggleStorage = () => this.setState(({ isStorageOpen }) => ({
         isStorageOpen: !isStorageOpen,
     }));
 
     render() {
-        const { farmer, apples, isStorageOpen } = this.state;
+        const { apples, isStorageOpen } = this.state;
         const applesJSX = Array(apples).fill('🍎');
 
         log('PARENT → render', 'red');
 
         return (
             <section className = 'example'>
-                <h1>👩🏼‍🌾 Привет, фермер {farmer}.</h1>
+                <h1>👩🏼‍🌾 Привет, фермер Уолтер Уайт.</h1>
                 <p>Яблок: {applesJSX}</p>
-                <button onClick = { this._useStorage }>
+                <button onClick = { this._toggleStorage }>
                     Открыть/закрыть 📦
                 </button>
                 <button onClick = { this._yieldApples }>Собрать 🍎</button>

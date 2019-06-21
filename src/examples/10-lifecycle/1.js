@@ -3,16 +3,16 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 
 class Parent extends Component {
-    static getDerivedStateFromProps() {
-        console.log('→ getDerivedStateFromProps');
-
-        return null;
-    }
-
     constructor() {
         super();
 
         console.log('→ constructor');
+    }
+
+    static getDerivedStateFromProps() {
+        console.log('→ getDerivedStateFromProps');
+
+        return null;
     }
 
     state = {};
