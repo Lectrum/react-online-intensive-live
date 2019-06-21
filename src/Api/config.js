@@ -1,8 +1,8 @@
 // Core
 import { getFullApiUrl } from '../instruments';
 
-const GROUP_ID = '97logdaump6s';
-const TOKEN = 'd2cq98yqd0';
+const GROUP_ID = 'qi6mqple8zsy';
+const TOKEN = '9tewwd6spi';
 const url = 'https://lab.lectrum.io/react/api';
 const api = getFullApiUrl(url, GROUP_ID);
 
