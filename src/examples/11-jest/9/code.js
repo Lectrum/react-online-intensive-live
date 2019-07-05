@@ -11,13 +11,13 @@ class User {
 }
 
 // Будет ломаться каждый раз
-// test('«User» constructor should match its snapshot', () => {
-//     expect(new User('Jack')).toMatchSnapshot();
-// });
-
-test('«User» constructor should match its snapshot inline', () => {
-    expect(new User('Jack')).toMatchSnapshot({
-        created: expect.any(Date),
-        id:      expect.any(String),
-    });
+test('«User» constructor should match its snapshot', () => {
+    expect(new User('Jack')).toMatchSnapshot();
 });
+
+// test('«User» constructor should match its snapshot inline', () => {
+//     expect(new User('Jack')).toMatchSnapshot({
+//         created: expect.any(Date),
+//         id:      expect.any(String),
+//     });
+// });

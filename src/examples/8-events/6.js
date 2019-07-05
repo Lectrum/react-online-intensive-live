@@ -11,14 +11,14 @@ class Parent extends Component {
         console.log('→ previous state:', this.state.answer);
         console.log('→     next state:', event.target.value);
 
-        event.persist();
-        this.setState(() => ({
+        this.setState({
             answer: event.target.value,
-        }));
+        });
 
-        // this.setState({
+        // event.persist();
+        // this.setState(() => ({
         //     answer: event.target.value,
-        // });
+        // }));
     };
 
     render() {

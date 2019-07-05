@@ -1,6 +1,6 @@
 const API_URL = 'https://jsonplaceholder.typicode.com/todos';
 
-const implementation = (url) => {
+const implementation = (url /*, options */) => {
     return Promise.resolve({
         json() {
             return Promise.resolve(`A call to ${url} was successful`);

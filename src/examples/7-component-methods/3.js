@@ -1,6 +1,6 @@
 class Human {
     constructor(name) {
-        this.name2 = name;
+        this.name = name;
         // debugger;
 
         this.sayName = this.sayName.bind(this);
@@ -9,14 +9,12 @@ class Human {
     sayName() {
         // debugger;
 
-        return this.name;
+        console.log(this.name);
     }
 }
 
 const ron = new Human('Ron');
 
-console.log('→ ron.sayName', ron.sayName());
-
-// console.log('→ setTimeout', setTimeout(ron.sayName, 1000));
-// console.log('→ setTimeout', setTimeout(() => ron.sayName(), 2000));
-// console.log('→ setImmediate', setImmediate(ron.sayName));
+ron.sayName();
+// setTimeout(ron.sayName, 1000);
+// setImmediate(ron.sayName);
