@@ -1,2 +1,2 @@
 // Examples
-import './routing-with-react';
+import './native-browser-navigation/1';

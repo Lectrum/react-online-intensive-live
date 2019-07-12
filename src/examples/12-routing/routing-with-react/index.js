@@ -7,7 +7,7 @@ import { Router } from 'react-router-dom';
 import { history } from './common/history';
 
 // Routes
-import { Routes } from './5';
+import { Routes } from './1';
 
 render(
     <Router history = { history }>

@@ -2,4 +2,4 @@
 import './theme/init.css';
 
 // Examples
-import './8-events';
+import './12-routing';

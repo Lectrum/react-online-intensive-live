@@ -6,37 +6,25 @@ import * as Components from '../../components';
 
 // Instruments
 import Styles from './styles.module.css';
-import { api, TOKEN, GROUP_ID } from '../../Api';
+import { api } from '../../Api';
+import { useSocket } from './useSocket';
 
 export const Feed = () => {
     const [ posts, setPosts ] = useState([]);
     const [ isFetching, setIsFetching ] = useState(false);
 
+    useSocket(posts, setPosts);
+
     const fetchPosts = async () => {
         setIsFetching(true);
-
-        const response = await fetch(api, {
-            method: 'GET',
-        });
-
-        const { data: fetchedPosts } = await response.json();
-
+        const fetchedPosts = await api.fetchPosts();
         setPosts(fetchedPosts);
         setIsFetching(false);
     };
 
     const likePost = async (id) => {
         setIsFetching(true);
-
-        const response = await fetch(`${api}/${id}`, {
-            method:  'PUT',
-            headers: {
-                Authorization: TOKEN,
-            },
-        });
-
-        const { data: likedPost } = await response.json();
-
+        const likedPost = await api.likePost(id);
         setPosts(
             posts.map((post) => post.id === likedPost.id ? likedPost : post),
         );
@@ -45,32 +33,14 @@ export const Feed = () => {
 
     const createPost = async (comment) => {
         setIsFetching(true);
-
-        const response = await fetch(api, {
-            method:  'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization:  TOKEN,
-            },
-            body: JSON.stringify({ comment }),
-        });
-
-        const { data: createdPost } = await response.json();
-
+        const createdPost = await api.createPost(comment);
         setPosts([ createdPost, ...posts ]);
         setIsFetching(false);
     };
 
     const removePost = async (id) => {
         setIsFetching(true);
-
-        await fetch(`${api}/${id}`, {
-            method:  'DELETE',
-            headers: {
-                Authorization: TOKEN,
-            },
-        });
-
+        await api.removePost(id);
         setPosts(posts.filter((post) => post.id !== id));
         setIsFetching(true);
     };
@@ -93,7 +63,6 @@ export const Feed = () => {
     return (
         <section className = { Styles.feed }>
             <Components.Spinner isSpinning = { isFetching } />
-            <Components.StatusBar />
             <Components.Composer createPost = { createPost } />
             {postsJSX}
         </section>
